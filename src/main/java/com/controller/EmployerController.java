@@ -18,8 +18,7 @@ import com.service.Employer_Service;
 @RequestMapping("/Employer")
 public class EmployerController {
 	
-	//This is employer Controller
-	//Sample comment
+
 
 	@Autowired
 	Employer_Service eservice;
@@ -28,7 +27,7 @@ public class EmployerController {
 	public ResponseEntity<Employer> details(@RequestBody Employer e){
 		Employer obj=e;
 		eservice.saveDetails(e);
-		
+		return  new ResponseEntity<Employer>(obj,HttpStatus.OK);
 	}
 	
 	@PutMapping("/update")
