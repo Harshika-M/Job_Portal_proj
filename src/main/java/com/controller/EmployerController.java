@@ -28,7 +28,7 @@ public class EmployerController {
 	public ResponseEntity<Employer> details(@RequestBody Employer e){
 		Employer obj=e;
 		eservice.saveDetails(e);
-		return  new ResponseEntity<Employer>(obj,HttpStatus.OK);
+		
 	}
 	
 	@PutMapping("/update")
